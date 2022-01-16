@@ -1,2 +1,10 @@
 # Human-Action-Recognition-Project
-My 3rd Year Project (Dissertation) at the University of Warwick
+My 3rd Year Project (Dissertation) at the University of Warwick. The project consisted of developing a human action recognition pipeline that was able to take as input video sequences of skeleton data of various human actions (such as walking, falling, jumping, etc), conduct pre-processing and feature extraction to obtain view-invarient image representations of the spatial and temporal information for each skeleton action sequence of a human action and use these images to train a ResNet101V2 using transfer learning to classify selected human actions. 
+
+Contains the project literature review and the project code. 
+- Literature Review folder contains the academic papers used to conduct the literature review for this project as well as the review reports for each paper which summarises the content of each paper. 
+
+- Project Code folder contains the code that was used to pre-process the skeleton data to remove errors and correct joint angles as well as bone lengths. The code then converts the pre-processed skeleton action sequences into the view-invarient images representations which are JEDMs (Joint Euler Distance Matrices) and JEAs (Joint Euler Angles) (Methodology of feature extraction into JEDMs and JEAs was discussed in academic paper 2 (see: Literature Review/Academic Papers Reviewed)). This code can be found in the folder 'Project Code/Dataset Creation'. The code for training the ResNets is in the folder 'Project Code/ResNet Training Code'. There are 4 ResNets which are trained using 2 different protocols (Cross Subject Protocol (CSP) and Cross View Protocol (CVP) (See academic paper 2 for more on the protocols and neural net pipeline)). Lastly in the folder 'Project Code/Trained ResNet Testing Code', the Trained ResNEts were tested.
+
+See following Github page for access to the raw dataset used (https://github.com/shahroudy/NTURGB-D) 
+See following academic paper for details on the feature extraction of the skeletons into view-invariant image representations as well as the neural net pipeline (Doi: 10.1109/TIP.2019.2907048) (Paper 2 in folder 'Literature Review/Academic Papers Reviewed).
